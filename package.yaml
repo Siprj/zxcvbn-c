@@ -1,0 +1,55 @@
+name: zxcvbn-c
+version: 0.1.0.0
+license: BSD-3-Clause
+author: "Joey Hess"
+maintainer: "sipr.jan@gmail.com"
+copyright: 2016 Joey Hess, 2015 Tony Evans
+
+extra-source-files:
+  - CHANGELOG
+  - dict-generate.cpp
+  - makefile
+  - words-10k-pass.txt
+  - words-english.txt
+  - words-female.txt
+  - words-male.txt
+  - words-surname.txt
+  - zxcvbn.h
+  - zxcvbn.c
+
+
+# Metadata used when publishing your package
+synopsis: Password strength estimation
+category: System
+
+description: >
+    This is a Haskell binding to the C port of the zxcvbn
+    password strength estimator, from <https://github.com/tsyrogit/zxcvbn-c>
+    .
+    An article on the reasons for zxcvbn is at
+    <https://tech.dropox.com/2012/04/zxcvbn-realistic-password-strength-estimation>
+
+dependencies:
+  - base >= 4.7 && < 5
+
+custom-setup:
+    dependencies:
+        - base
+        - Cabal
+        - process
+
+library:
+
+  exposed-modules:
+    - Text.Password.Strength
+  other-modules: []
+  source-dirs:
+    - .
+  ghc-options:
+    - -Wall
+
+  include-dirs:
+    - .
+  c-sources:
+    - zxcvbn.c
+    - zxcvbn.h
