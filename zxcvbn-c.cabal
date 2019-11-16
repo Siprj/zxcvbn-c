@@ -1,11 +1,11 @@
+Cabal-Version: 2.4
 Name: zxcvbn-c
-Version: 1.0.1
-Cabal-Version: >= 1.8
+Version: 1.0.2
 Maintainer: Joey Hess <id@joeyh.name>
 Author: Joey Hess
 Stability: Stable
 Copyright: 2016 Joey Hess, 2015 Tony Evans
-License: BSD3
+License: BSD-3-Clause
 License-File: COPYRIGHT
 Build-Type: Custom
 Category: System
